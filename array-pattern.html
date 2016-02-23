@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Test</title>
+		<meta name="description" content="test">
+		<meta name="author" content="Don Sro">
+	</head>
+	<body>
+		<h1>Matching pattern in array</h1>
+		<h3>White board challenge.</h3>
+		<p>Requirement: Return TRUE if a sum of any two values in array equals <em>-2</em></p>
+		<p><code>var arrayToInspect = [7, -5, 2, 4, 1, 8, -2, 10, 255];</code></p>
+		<p>Please check your console to see the result. Hit F12.</p>
+		<script type="text/javascript">
+		'use strict';
+
+		// Krossover white board challenge.
+		// Requirement: Return TRUE if a sum of any two values in array equals to -2;
+		// Please use your web development console to validate this.
+
+		var arrayToInspect = [7, -5, 2, 4, 0, 8, -2, 10, 255];
+
+		var patternToFind = function (a, b) {
+			return a + b === -2;
+		};
+
+		function findMatchingPattern (arr, patt) {
+
+			var patternFound = false,
+				arrLength = arr['length'],
+				iLoop = [], jLoop = []; // These are for demo purposes only
+
+			for (var i = 0, firstItem; i < arrLength; i++) {
+
+				// Please disregard this. This is for console demo only.
+				if (jLoop['length'] !== 0) {
+					iLoop.push(jLoop);
+					jLoop = [];
+				}
+
+				if (patternFound) break;
+
+				firstItem = arr.shift(); // Shifting an array to avoid unnecessary iterations
+
+				for (var j = 0; j < arr['length']; j++) {
+
+					jLoop.push(firstItem + arr[j]); // DEMO DEMO DEMO. Please disregard this.
+					//console.log(jLoop);
+
+					if (patt(firstItem, arr[j])) { // This is where pattern maching happens
+						patternFound = true;
+						break;
+					}
+				}
+			}
+
+			console.log(iLoop);
+
+			return patternFound;
+
+		}
+
+		console.log('Pattern found: ' + findMatchingPattern(arrayToInspect, patternToFind)); // Watch your console to see the MAGIC :)
+
+		</script>
+	</body>
+</html>

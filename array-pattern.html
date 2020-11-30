@@ -20,7 +20,7 @@
 
 		// Krossover white board challenge.
 		// Requirement: Return TRUE if a sum of any two values in array equals to -2.
-		// Please use your web development console to validate this.
+		// Please use your web development console to validate.
 
 		var arrayToInspect = [7, -5, 2, 4, 0, 8, -2, 10, 255];
 
@@ -38,7 +38,7 @@
 
 			for (var i = 0, firstItem; i < arr['length']; i++) {
 
-				// Please disregard this. This is for console demo only.      
+				// This is for console demo only. Please disregard.      
 				if (jLoop['length'] !== 0) {
 					iLoop.push(jLoop);
 					jLoop = [];
@@ -50,8 +50,7 @@
 
 				for (var j = 0; j < arrClone['length']; j++) {
 
-					jLoop.push(mod(firstItem, arrClone[j])); // DEMO DEMO DEMO. Please disregard this.
-					//console.log(jLoop);
+					jLoop.push(mod(firstItem, arrClone[j])); // DEMO DEMO DEMO. Please disregard.
 
 					if (mod(firstItem, arrClone[j]) === expect) { // This is where pattern matching happens.
 						patternFound = true;
@@ -66,7 +65,8 @@
 
 		}
 
-		// console.log('Pattern found: ' + findMatchingPattern(arrayToInspect, patternToFind)); // Watch your console to see the MAGIC :)
+		// console.log('Pattern found: ' + findMatchingPattern(arrayToInspect, patternToFind));
+		// Watch your console to see the MAGIC :)
 
 		</script>
 	</body>

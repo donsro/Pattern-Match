@@ -30,6 +30,7 @@
 
 			var patternFound = false,
 				arrLength = arr['length'],
+				arrClone = arr.slice(),
 				iLoop = [], jLoop = []; // These are for demo purposes only.
 
 			for (var i = 0, firstItem; i < arrLength; i++) {
@@ -42,14 +43,14 @@
 
 				if (patternFound) break;
 
-				firstItem = arr.shift(); // Shifting an array to avoid unnecessary iterations.
+				firstItem = arrClone.shift(); // Shifting an array to avoid unnecessary iterations.
 
-				for (var j = 0; j < arr['length']; j++) {
+				for (var j = 0; j < arrClone['length']; j++) {
 
-					jLoop.push(firstItem + arr[j]); // DEMO DEMO DEMO. Please disregard this.
+					jLoop.push(firstItem + arrClone[j]); // DEMO DEMO DEMO. Please disregard this.
 					//console.log(jLoop);
 
-					if (patt(firstItem, arr[j])) { // This is where pattern matching happens.
+					if (patt(firstItem, arrClone[j])) { // This is where pattern matching happens.
 						patternFound = true;
 						break;
 					}

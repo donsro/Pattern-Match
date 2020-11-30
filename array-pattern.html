@@ -28,12 +28,11 @@
 
 		function findMatchingPattern (arr, patt) {
 
-			var patternFound = false,
-				arrLength = arr['length'],
+			var patternFound = false,				
 				arrClone = arr.slice(),
 				iLoop = [], jLoop = []; // These are for demo purposes only.
 
-			for (var i = 0, firstItem; i < arrLength; i++) {
+			for (var i = 0, firstItem; i < arrClone['length']; i++) {
 
 				// Please disregard this. This is for console demo only.      
 				if (jLoop['length'] !== 0) {
@@ -63,7 +62,7 @@
 
 		}
 
-		console.log('Pattern found: ' + findMatchingPattern.call(arrayToInspect, patternToFind)); // Watch your console to see the MAGIC :)
+		console.log('Pattern found: ' + findMatchingPattern(arrayToInspect, patternToFind)); // Watch your console to see the MAGIC :)
 
 		</script>
 	</body>

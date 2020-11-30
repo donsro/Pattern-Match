@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Test</title>
+		<title>Matching pattern in Array</title>
 		<meta name="description" content="test">
 		<meta name="author" content="Don Sro">
 	</head>
@@ -10,9 +10,11 @@
 		<h1>Matching pattern in Array</h1>
 		<h3>White board challenge</h3>
 		<p>Requirement: Return TRUE if a sum of either two array values equals <em>-2</em></p>
-		<p><code>var arrayToInspect = [7, -5, 2, 4, 1, 8, -2, 10, 255];</code></p>
-		<p><code>var patternToFind = function (a, b) { return a + b === -2; };</code></p>
-		<p>Please check your console to see the result. Hit F12.</p>
+		<p><code>var arrayToInspect = [7, -5, 2, 4, 0, 8, -2, 10, 255];</code></p>
+		<p><code>var modifier = function (a, b) { return a + b; };</code></p>
+		<p><code>var expectedResult = -2;</code></p>
+		<p><code>function findMatchingPattern (arrayToInspect, modifier, expectedResult)</code></p>
+		<p>Your browser's JS console can be used for testing - F12.</p>
 		<script type="text/javascript">
 		'use strict';
 
@@ -22,11 +24,13 @@
 
 		var arrayToInspect = [7, -5, 2, 4, 0, 8, -2, 10, 255];
 
-		var patternToFind = function (a, b) {
-			return a + b === -2;
+		var modifier = function (a, b) {
+			return a + b;
 		};
 
-		function findMatchingPattern (arr, patt) {
+		var expectedResult = -2;		
+
+		function findMatchingPattern (arr, mod, expect) {
 
 			var patternFound = false,				
 				arrClone = arr.slice(),
@@ -46,10 +50,10 @@
 
 				for (var j = 0; j < arrClone['length']; j++) {
 
-					jLoop.push(firstItem + arrClone[j]); // DEMO DEMO DEMO. Please disregard this.
+					jLoop.push(mod(firstItem, arrClone[j])); // DEMO DEMO DEMO. Please disregard this.
 					//console.log(jLoop);
 
-					if (patt(firstItem, arrClone[j])) { // This is where pattern matching happens.
+					if (mod(firstItem, arrClone[j]) === expect) { // This is where pattern matching happens.
 						patternFound = true;
 						break;
 					}
@@ -62,7 +66,7 @@
 
 		}
 
-		console.log('Pattern found: ' + findMatchingPattern(arrayToInspect, patternToFind)); // Watch your console to see the MAGIC :)
+		// console.log('Pattern found: ' + findMatchingPattern(arrayToInspect, patternToFind)); // Watch your console to see the MAGIC :)
 
 		</script>
 	</body>

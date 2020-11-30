@@ -1,0 +1,22 @@
+{
+  "name": "pattern-match",
+  "version": "1.0.0",
+  "description": "Return TRUE if a sum of any two values in array equals to XYZ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donsro/Pattern-Match.git"
+  },
+  "keywords": [
+    "pattern match"
+  ],
+  "author": "donsro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donsro/Pattern-Match/issues"
+  },
+  "homepage": "https://github.com/donsro/Pattern-Match#readme"
+}

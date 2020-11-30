@@ -7,10 +7,11 @@
 		<meta name="author" content="Don Sro">
 	</head>
 	<body>
-		<h1>Matching pattern in an array</h1>
-		<h3>White board challenge.</h3>
-		<p>Requirement: Return TRUE if a sum of either of two array values equals <em>-2</em></p>
+		<h1>Matching pattern in Array</h1>
+		<h3>White board challenge</h3>
+		<p>Requirement: Return TRUE if a sum of either two array values equals <em>-2</em></p>
 		<p><code>var arrayToInspect = [7, -5, 2, 4, 1, 8, -2, 10, 255];</code></p>
+		<p><code>var patternToFind = function (a, b) { return a + b === -2; };</code></p>
 		<p>Please check your console to see the result. Hit F12.</p>
 		<script type="text/javascript">
 		'use strict';
@@ -33,7 +34,7 @@
 
 			for (var i = 0, firstItem; i < arrLength; i++) {
 
-				// Please disregard this. This is for console demo only.
+				// Please disregard this. This is for console demo only.      
 				if (jLoop['length'] !== 0) {
 					iLoop.push(jLoop);
 					jLoop = [];
